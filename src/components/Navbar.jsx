@@ -2,9 +2,9 @@ import { NavLink } from 'react-router-dom';
 
 const navLinkStyles = ({ isActive }) => ({
   padding: '0.5rem 1rem',
-  color: isActive ? '#007bff' : '#555',
-  borderBottom: isActive ? '2px solid #007bff' : '2px solid transparent',
-  fontWeight: isActive ? '600' : '400',
+  color: isActive ? '#000000' : '#555555',
+  borderBottom: isActive ? '2px solid #000000' : '2px solid transparent',
+  fontWeight: isActive ? '700' : '400',
 });
 
 export default function Navbar() {
@@ -18,9 +18,8 @@ export default function Navbar() {
           <li><NavLink to="/services" style={navLinkStyles}>Services</NavLink></li>
           <li><NavLink to="/projects" style={navLinkStyles}>Projects</NavLink></li>
           <li><NavLink to="/contact" style={navLinkStyles}>Contact</NavLink></li>
-         <li> <NavLink to="/costcalculator" style={navLinkStyles}>Cost Calculator</NavLink></li> 
-         <li> <NavLink to="/QuoteGenerator" style={navLinkStyles}>QuoteGenerator</NavLink></li> 
-
+          <li><NavLink to="/costcalculator" style={navLinkStyles}>Cost Calculator</NavLink></li>
+          <li><NavLink to="/QuoteGenerator" style={navLinkStyles}>QuoteGenerator</NavLink></li>
         </ul>
       </div>
     </nav>
