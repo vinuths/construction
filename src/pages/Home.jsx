@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Floorplan from './Floorplan';  // Exact casing matches filename
+import AiAssistant from './AiAssistant';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -25,6 +26,51 @@ export default function Home() {
   ];
 
   return (
+    <>
+    <style>{`
+  @keyframes floatY {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  @keyframes scrollFloat {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+`}</style>
+
+<div
+  onClick={() => navigate('/contact')}
+  style={{
+    width: '100%',
+    background: 'linear-gradient(90deg, #ff8a00, #e52e71)',
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: '1rem',
+    padding: '0.8rem 0',
+    overflow: 'hidden',
+    cursor: 'pointer',
+    animation: 'floatY 3s ease-in-out infinite',
+    boxShadow: '0 4px 10px rgba(0,0,0,0.2)',
+  }}
+>
+  <div
+    style={{
+      display: 'inline-block',
+      whiteSpace: 'nowrap',
+      animation: 'scrollFloat 25s linear infinite',
+    }}
+  >
+    <span style={{ paddingRight: '4rem' }}>
+      ✨ Build your vision with confidence – Contact us today!
+    </span>
+    <span style={{ paddingRight: '4rem' }}>
+      ✨ Build your vision with confidence – Contact us today!
+    </span>
+  </div>
+</div>
+
+
     <section style={{ maxWidth: '1000px', margin: '3rem auto', padding: '1rem' }}>
       {/* Hero Section */}
       <div
@@ -377,6 +423,7 @@ export default function Home() {
         </p>
       </section>
 
+    
       {/* Final CTA */}
       <section
         style={{
@@ -445,7 +492,14 @@ export default function Home() {
             className="shine"
           />
         </button>
+        {/* ...all your other JSX code above... */}
+
+{/* AI Assistant Widget */}
+
+<AiAssistant />
+
       </section>
     </section>
+    </>
   );
 }

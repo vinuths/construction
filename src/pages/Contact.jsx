@@ -184,6 +184,43 @@ export default function Contact() {
           </a>
         </div>
       </div>
+{/* WhatsApp Floating Button - Right Side */}
+<a
+  href="https://wa.me/9743880882" // Replace with your WhatsApp number
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat with us on WhatsApp"
+  style={{
+    position: 'fixed',
+    bottom: '20px',
+    right: '20px',
+    width: '60px',
+    height: '60px',
+    borderRadius: '50%',
+    backgroundColor: '#25D366', // WhatsApp green
+    boxShadow: '0 6px 12px rgba(0, 0, 0, 0.2)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 9999,
+    cursor: 'pointer',
+    transition: 'transform 0.2s ease-in-out',
+  }}
+  onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.1)')}
+  onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="32"
+    height="32"
+    viewBox="0 0 32 32"
+    fill="white"
+  >
+    <path d="M16 0C7.2 0 0 7.2 0 16c0 2.9.8 5.6 2.2 8L0 32l8.3-2.2C11 31.3 13.4 32 16 32c8.8 0 16-7.2 16-16S24.8 0 16 0zm0 29.1c-2.2 0-4.3-.5-6.1-1.5l-.4-.2-5 1.3 1.3-4.9-.3-.5c-1.3-2-2-4.4-2-6.8C3.5 8.1 9.4 2.2 16 2.2S28.5 8.1 28.5 16c0 6.6-5.9 13.1-12.5 13.1zM22.6 20.4c-.3-.1-2.1-1-2.5-1.3-.4-.2-.7-.3-1 .2s-1.2 1.5-1.5 1.7c-.3.2-.6.3-1 .1-.5-.2-1.9-.7-3.6-2.2-1.3-1.2-2.2-2.8-2.5-3.3-.2-.4-.1-.7.1-.9.2-.2.4-.5.7-.7.2-.2.3-.4.5-.6.1-.2.2-.4 0-.6s-.8-2-1.1-2.8c-.3-.7-.6-.6-.9-.6H9c-.3 0-.7.1-.9.4-.3.3-1 1-1 2.4 0 1.4 1 2.7 1.1 2.9.1.2 2.2 3.4 5.3 4.8 3.2 1.4 3.2.9 3.8.9.6-.1 1.9-.8 2.2-1.6.3-.9.3-1.6.2-1.7-.1 0-.3-.2-.7-.4z" />
+  </svg>
+</a>
+
+
     </section>
   );
 }
